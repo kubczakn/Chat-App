@@ -1,16 +1,8 @@
-// Real-time chat application
+// Server for chat application
 const express = require('express');
 const socketio = require('socket.io');
 const app = express();
-const port = process.env.PORT || 3000;
-
-app.set('view engine', 'ejs');
-app.use(express.static('public'));
-
-// Handle index page
-app.get('/', (req, res) => {
-    res.render('index');
-});
+const port = 8080;
 
 // Start server
 const server = app.listen(port, () => {
